@@ -1,5 +1,4 @@
 import { TodoService } from '../service/service.todo';
-import { ToDo } from '../entity/todo.entity';
 import { CreateTodo } from '../dto/create.todo';
 import { UpdateTodo } from '../dto/update.todo';
 import { TodoMapper } from '../mapper/mapper.todo';
