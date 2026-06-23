@@ -3,9 +3,13 @@ import { TodoController } from './todo/controller/controller.todo';
 import { TodoService } from './todo/service/service.todo';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ToDo } from './todo/entity/todo.entity';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
