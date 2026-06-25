@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { HttpResponse } from '@angular/common/http';
-import { responseToDoDTO, createToDoDTO, updateToDoDTO } from '../model/dto/todo.dtos';
+import { responseToDoDTO, createToDoDTO, updateToDoDTO } from '../dto/todo.dtos';
 
 @Injectable({
   providedIn: 'root',
