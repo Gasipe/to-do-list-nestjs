@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>📝 Lista de Tarefas</mat-card-title>
+  <h1>Organize seu dia de forma simples e eficiente.</h1>
+
+  <form [formGroup]="todoForm">
+    <mat-card>
+      <mat-form-field appearance="fill">
+        <mat-label>Título</mat-label>
+        <input matInput type="text" placeholder="Nome da tarefa" formControlName="title" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Descrição da tarefa"
+          formControlName="description"
+        />
+      </mat-form-field>
+    </mat-card>
+  </form>
+</mat-card>

@@ -1,4 +1,4 @@
-export interface ToDO {
+export interface ToDo {
   id: string;
   title: string;
   description: string;

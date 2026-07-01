@@ -10,9 +10,7 @@
     "frontend": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
+        "@schematics/angular:component": {}
       },
       "root": "",
       "sourceRoot": "src",
@@ -30,9 +28,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "styles": ["src/styles.scss", "@angular/material/prebuilt-themes/azure-blue.css"]
           },
           "configurations": {
             "production": {
