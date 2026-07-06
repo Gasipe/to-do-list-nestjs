@@ -30,9 +30,12 @@ export class TodoService {
   }
 
   async update(id: string, updateTodo: UpdateTodo): Promise<ToDo> {
-    const todo = await this.findOne(id);
-    const updatedTodo = this.todoRepository.merge(todo, updateTodo);
-    return await this.todoRepository.save(updatedTodo);
+    await this.todoRepository.update(id, updateTodo);
+    const updatedTodo = await this.todoRepository.findOne({ where: { id } });
+    if (!updatedTodo) {
+      throw new NotFoundException('Todo not found');
+    }
+    return updatedTodo;
   }
 
   async remove(id: string): Promise<void> {

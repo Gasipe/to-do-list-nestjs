@@ -23,7 +23,6 @@ export class TodoService {
   }
 
   async updateToDo(id: string, todo: updateToDoDTO): Promise<HttpResponse<responseToDoDTO>> {
-    await this.findToDoById(id);
     const url = `${this.apiUrl}/${id}`;
     return firstValueFrom(this.http.put<responseToDoDTO>(url, todo, { observe: 'response' }));
   }
