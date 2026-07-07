@@ -81,6 +81,7 @@ export class Layout {
       return this.todoService.deleteToDo(id).then(() => {
         this.listTodo = this.listTodo.filter((todo) => todo.id !== id);
         this.loadTodos();
+        this.cdr.detectChanges();
       });
     } catch (error) {
       console.error('Error deleting todo:', error);
