@@ -1,0 +1,30 @@
+.todo-card {
+  margin-top: 15px;
+  text-align: center;
+}
+h1,
+mat-card-title {
+  text-align: center;
+  align-items: center;
+}
+
+mat-form-field {
+  width: 40%;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.todo-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mat-table {
+  margin-top: 20px;
+}
+
+button {
+  margin-left: 5px;
+}
